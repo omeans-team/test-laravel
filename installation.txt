@@ -1,0 +1,58 @@
+-composer update
+-php artisan key:generate
+-php artisan migrate (migrasi tabel ke db)
+
+install bootstrap
+-composer require laravel/ui
+-php artisan ui bootstrap
+
+install Bootstrap Auth Scaffolding
+-php artisan ui bootstrap --auth
+
+Install Bootstrap Packages
+check node installation
+# for node
+-node -v
+# for npm
+-npm -v
+
+-npm install
+
+
+Compile Assets
+As we can see, resources/sass folder _variables.scss and app.scss files have added along with sass variables and fonts.
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Variables
+@import 'variables';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+# for development
+npm run dev
+
+# for production
+npm run production
+npm run build
+
+
+The above command compiles CSS and JavaScript files from resources/js and resources/sass folder to the public folder.
+
+Automate SASS and JS Changes
+-npm run watch
+
+Using Bootstrap in Laravel Blade Template
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+</head>
+<body>
+    <h1>Tutorial made by Positronx.io</h1>
+</body>
+</html>
