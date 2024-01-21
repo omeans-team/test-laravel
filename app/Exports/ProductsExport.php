@@ -1,10 +1,10 @@
 <?php
 namespace App\Exports;
  
-use App\ProductsExport;
+use App\Export;
 use Maatwebsite\Excel\Concerns\FromCollection;
  
-class SiswaExport implements FromCollection
+class ProductsExport implements FromCollection
 {
     /**
     * @return \Illuminate\Support\Collection
